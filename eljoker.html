@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Eljoker Portfolio</title>  
+<style>  
+    body {  
+        margin: 0;  
+        font-family: Arial, sans-serif;  
+        color: white;  
+        overflow-x: hidden;  
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMVyCuAxCqCFkJ6EKbzY6WaSepYpTAXLLiUEEb1GsI9kLxfv8XcKEgH9Pg&s=10") no-repeat center center fixed;  
+        background-size: cover;  
+    }  
+body::before {  
+    content: "";  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(3, 32, 48, 0.85);  
+    z-index: -1;  
+}  
+
+header {  
+    background-color: rgba(26, 26, 26, 0.9);  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 15px 30px;  
+    flex-wrap: wrap;  
+    animation: slideDown 1s ease forwards;  
+}  
+header h1 {  
+    color: #66f2ff;  
+    margin: 0;  
+    font-weight: bold;  
+    font-size: 24px;  
+}  
+nav {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: center;  
+}  
+nav a {  
+    text-decoration: none;  
+    color: white;  
+    margin: 5px 10px;  
+    font-weight: 500;  
+    transition: 0.3s;  
+    cursor: pointer;  
+}  
+nav a:hover {  
+    color: #66f2ff;  
+}  
+.container {  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    padding: 40px;  
+    min-height: 90vh;  
+    flex-wrap: wrap;  
+}  
+.text {  
+    max-width: 500px;  
+    animation: fadeInLeft 1s ease forwards;  
+    flex: 1;  
+    min-width: 280px;  
+}  
+.text h2 {  
+    font-size: 28px;  
+    margin: 0;  
+}  
+.text h2 span {  
+    color: #66f2ff;  
+}  
+.text h3 {  
+    font-size: 20px;  
+    height: 30px;  
+}  
+.text p {  
+    color: #ccc;  
+    line-height: 1.6;  
+    font-size: 14px;  
+}  
+.image {  
+    animation: fadeInRight 1s ease forwards;  
+    flex: 1;  
+    min-width: 250px;  
+    display: flex;  
+    justify-content: center;  
+}  
+.image img {  
+    border-radius: 50%;  
+    width: 250px;  
+    height: 250px;  
+    object-fit: cover;  
+    border: 3px solid #66f2ff;  
+    box-shadow: 0 0 20px rgba(102, 242, 255, 0.5);  
+}  
+
+section {  
+    display: none;  
+    animation: fadeIn 0.8s ease forwards;  
+    padding: 30px;  
+    min-height: 80vh;  
+    text-align: center;  
+}  
+
+#aboutSection img {  
+    width: 250px;  
+    border-radius: 10px;  
+    border: 2px solid #66f2ff;  
+    box-shadow: 0 0 15px rgba(102, 242, 255, 0.5);  
+}  
+#aboutSection p {  
+    margin-top: 15px;  
+    font-size: 18px;  
+    color: #ccc;  
+}  
+
+.service-box {  
+    background: rgba(10, 61, 77, 0.9);  
+    margin: 20px auto;  
+    padding: 20px;  
+    max-width: 500px;  
+    border-radius: 10px;  
+    box-shadow: 0 0 15px rgba(102, 242, 255, 0.3);  
+    transition: transform 0.3s;  
+}  
+.service-box:hover {  
+    transform: scale(1.05);  
+}  
+.service-box h3 {  
+    color: #66f2ff;  
+    margin-bottom: 10px;  
+}  
+.service-box p {  
+    color: #ccc;  
+    font-size: 14px;  
+}  
+
+.typing {  
+    border-right: 2px solid #66f2ff;  
+    white-space: nowrap;  
+    overflow: hidden;  
+    animation: typing 4s steps(30, end), blink 0.6s infinite;  
+}  
+
+@keyframes typing {  
+    from { width: 0 }  
+    to { width: 100% }  
+}  
+@keyframes blink {  
+    50% { border-color: transparent }  
+}  
+@keyframes fadeInLeft {  
+    from { opacity: 0; transform: translateX(-50px); }  
+    to { opacity: 1; transform: translateX(0); }  
+}  
+@keyframes fadeInRight {  
+    from { opacity: 0; transform: translateX(50px); }  
+    to { opacity: 1; transform: translateX(0); }  
+}  
+@keyframes slideDown {  
+    from { transform: translateY(-50px); opacity: 0; }  
+    to { transform: translateY(0); opacity: 1; }  
+}  
+@keyframes fadeIn {  
+    from { opacity: 0; transform: translateY(20px); }  
+    to { opacity: 1; transform: translateY(0); }  
+}  
+
+@media (max-width: 768px) {  
+    .container {  
+        flex-direction: column;  
+        text-align: center;  
+        padding: 20px;  
+    }  
+    .text {  
+        max-width: 100%;  
+    }  
+    .image img {  
+        width: 200px;  
+        height: 200px;  
+    }  
+}
+</style>  
+</head>  
+<body>  
+<header>  
+    <h1>𝑬𝑳𝑱𝑶𝑲𝑬𝑹</h1>  
+    <nav>  
+        <a onclick="showSection('homeSection')">Home</a>  
+        <a onclick="showSection('aboutSection')">About</a>  
+        <a onclick="showSection('servicesSection')">Services</a>  
+        <a onclick="showSection('contactSection')">Contact</a>  
+    </nav>  
+</header>  
+
+<div id="homeSection" class="container" style="display:flex;">  
+    <div class="text">  
+        <h2><em>Hey, It's</em> <span>𝑬𝑳𝑱𝑶𝑲𝑬𝑹</span></h2>  
+        <h3 class="typing">𝑯𝑬𝑳𝑳𝑶 𝑭𝑹𝑰𝑬𝑵𝑫</h3>  
+        <p>  
+           𝙒𝙀𝙇𝘾𝙊𝙈𝙀، 𝙏𝙊 𝙈𝙔 𝙋𝘼𝙂𝙀   
+           𝙄 𝙒𝙊𝙐𝙇𝘿 𝙇𝙄𝙆𝙀 𝙏𝙊 𝙄𝙉𝙏𝙍𝙊𝘿𝙐𝘾𝙀 𝙈𝙔𝙎𝙀𝙇𝙁 𝙏𝙊 𝙔𝙊𝙐  
+           𝙄 𝘼𝙈 𝙄𝙉 𝙏𝙃𝙀 𝙁𝙄𝙀𝙇𝘿 𝙊𝙁 𝘾𝙔𝘽𝙀𝙍 𝙎𝙀𝘾𝙐𝙍𝙄𝙏𝙔    
+           𝙄 𝙒𝙊𝙍𝙆 𝙄𝙉 𝙒𝙀𝘽𝙎𝙄𝙏𝙀 𝙋𝙍𝙊𝙂𝙍𝘼𝙈𝙈𝙄𝙉𝙂 𝘼𝙉𝘿 𝘿𝙀𝙎𝙄𝙂𝙉   
+           𝘿𝙊 𝙔𝙊𝙐 𝙒𝘼𝙉𝙏 𝙏𝙊 𝙃𝙀𝙇𝙋?  
+        </p>  
+    </div>  
+    <div class="image">  
+        <img src="FB_IMG_1755264906308.jpg" alt="Eljoker">  
+    </div>  
+</div>  
+
+<section id="aboutSection">  
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJmsrYJJPyu8F8HIttWqs8CYu75ZxpMWferWH9KWIchhVXngIs_lPlnDuf&s=10" alt="Cyber Security">  
+    <p>دا مجالي تحب المساعدة ؟</p>  
+</section>  
+
+<section id="servicesSection">  
+    <h2 style="color:#66f2ff;">My Services</h2>  
+    <div class="service-box">  
+        <h3>Cyber Security</h3>  
+        <p>حماية الأنظمة والمواقع من الاختراق والكشف عن الثغرات الأمنية.</p>  
+    </div>  
+    <div class="service-box">  
+        <h3>Web Development</h3>  
+        <p>تصميم وبرمجة مواقع احترافية بأحدث التقنيات.</p>  
+    </div>  
+    <div class="service-box">  
+        <h3>Web Design</h3>  
+        <p>تصميم واجهات مستخدم جذابة وسهلة الاستخدام.</p>  
+    </div>  
+</section>  
+
+<section id="contactSection">  
+    <h2 style="color:#66f2ff;">Contact Me</h2>  
+    <div class="service-box">  
+        <a href="https://www.facebook.com/share/1C1Pf475SJ/">📧 MY Email</a>  
+    </div>  
+</section>  
+
+<script>  
+function showSection(id) {  
+    let sections = ["homeSection", "aboutSection", "servicesSection", "contactSection"];  
+    sections.forEach(sec => {  
+        document.getElementById(sec).style.display = "none";  
+    });  
+    if(id === "homeSection") {  
+        document.getElementById(id).style.display = "flex";  
+    } else {  
+        document.getElementById(id).style.display = "block";  
+    }  
+}  
+</script>  
+</body>  
+</html>
